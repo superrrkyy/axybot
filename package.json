@@ -1,0 +1,25 @@
+{
+  "name": "axybot",
+  "version": "5.0.0",
+  "description": "axybot Core V5 - Modular WhatsApp Bot Framework",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "bot",
+    "axybot",
+    "framework"
+  ],
+  "author": "axybot",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc14",
+    "dotenv": "^17.4.2",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
