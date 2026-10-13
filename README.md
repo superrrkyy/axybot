@@ -57,6 +57,21 @@ Lalu isi file `.env`:
 
 ```env
 # Nomor owner (format internasional, tanpa + atau spasi)
+
+<details>
+<summary>🇬🇧 English summary</summary>
+
+**axybot Core V5** — a modular WhatsApp bot framework built on Baileys.
+
+- Commands are auto-loaded from `src/commands/<category>/`
+- Permission layers: owner, group admin, premium, user
+- SQLite storage, message normalizer (text/image/video captions), custom logger
+- Ships with an `.env.example` and a plain `npm start`
+
+Read the docs in `README.md` (Indonesian) or open an issue with questions.
+
+</details>
+
 OWNER_NUMBER=628123456789
 
 # (Opsional) LID owner
