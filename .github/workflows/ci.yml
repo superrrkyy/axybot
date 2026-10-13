@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node test & syntax
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Periksa sintaks seluruh file
+        run: |
+          gagal=0
+          while IFS= read -r f; do
+            node --check "$f" || { echo "Sintaks bermasalah: $f"; gagal=1; }
+          done < <(git ls-files '*.js')
+          exit $gagal
+
+      - name: Unit test (tanpa koneksi WhatsApp)
+        run: npm test
